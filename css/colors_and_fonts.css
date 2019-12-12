@@ -1,0 +1,98 @@
+body {
+    font-family: Optima, sans-serif;
+    background-color: silver;
+}
+a:link {
+    color: #98FB98;
+}
+a:visited {
+    color: #404;
+}
+header {
+    text-align: center;
+    color: white;
+    background-color: #98FB98;
+}
+header h1 {
+    color: #006400;
+    font-size: 250%;
+}
+header h2 {
+    color: #8B0000;
+    font-weight: normal;
+    font-style: italic;
+}
+h3 {
+color: #006400;
+font-size: 245%
+}
+h4 {
+color: #006400;
+font-size: 245%
+}
+#sitenav {
+    color: white;
+    background-color: #6495ED;
+}
+#sitenav ol {
+    font-size: 90%;
+    text-align: center;
+}
+#sitenav li {
+    border-left: 1px solid #98FB98;
+}
+#sitenav li a {
+    color: white;
+}
+#sitenav li a:link, #sitenav li a:visited {
+    color: white; 
+    text-decoration: none;
+}
+#sitenav li a:hover {
+    color: #98FB98;
+}
+#main {
+    background-color: #98FB98;
+}
+.content {
+    background-color: white;
+}
+.content p {
+    font-size: 90%;
+    line-height: 1.4;
+}
+#sidebar h3 {
+    font-size: 100%;
+    color: white;
+    font-weight: normal;
+    background-color: #6495ED;
+}
+#sidebar ol {
+    background-color: white; 
+    border: 2px solid #6495ED;
+    border-top: 0;
+}
+#sidebar li {
+    font-size: 85%;
+}
+#sidebar li a:link, #sidebar li a:visited {
+    text-decoration: none;
+    color: 	#6495ED;
+}
+#sidebar li a:hover {
+    color: #6495ED;
+}
+footer {
+    background-color: #6495ED; 
+    color: white;
+}
+footer p {
+    font-size: 85%;
+}
+footer p a:link, footer p a:visited {
+    color: #E6E6FA;
+}
+#photo img:hover {
+color: #E6E6FA;
+background-color: #eeeabe;
+}
