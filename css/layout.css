@@ -65,3 +65,6 @@ height: auto;
 #main {
 padding: 0;
 }
+#sidebar {
+visibility: hidden; }
+}
