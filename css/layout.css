@@ -87,7 +87,6 @@ thead tr {
 display: none;
 }
 }
-tr:nth-of-type(odd) {background: lightgray;}
 .video-container {
 position: relative;
 padding-bottom: 56.25%;
