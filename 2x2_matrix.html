@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Programming STEM Project - [2x2 Matrix Inverse]</title>
+	<style>
+		/* styles for layout */
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		div.center {
+			width: 800px;
+		}
+
+		/* styles for colors and fonts */
+		.answer {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<h3>Programming STEM Project - [2x2 Matrix Inverse]</h3>
+		<p>
+			This will find the inverse of a 2x2 matrix
+		</p>
+		<span class="input">a</span>: <input id="input1" type="text" size=7>
+    <span class="input">b</span>: <input id="input2" type="text" size=7>
+    <br>
+    <span class="input">c</span>: <input id="input3" type="text" size=7>
+    <span class="input">d</span>: <input id="input4" type="text" size=7>
+	
+  	<br>
+
+    <input type="button" onclick="getInput()" value="GO">
+		<br>
+    <br>
+    |<span id="output1" class="answer"></span>
+    &nbsp
+		<span id="output2" class="answer"></span>|
+    &nbsp
+		<br>
+		|<span id="output3" class="answer"></span>
+    &nbsp
+		<span id="output4" class="answer"></span>|
+    &nbsp
+
+  </div>
+</body>
+<script>
+  
+  
+  /*
+  You can change anything on this page--HTML tags, CSS styles, JavaScript 
+  functions, etc. Do what you need to make it suitable for your STEM problem.
+  The lines of YOUR CODE are just a suggestion.
+
+  The getInput function will take user input from the page. You should call  
+  your functions from inside the getInput function.
+  
+  The writeOutput function will write some given text to the output span on
+  the page. You can call this function with your code when you have a result.
+  */
+
+  // This function will get the text entered into the "input" text field.
+  // Then it calls another function with the input as an argument.
+  function getInput() {
+    let inputField1 = document.getElementById("input1");
+    let input1 = inputField1.value;
+
+    let inputField2 = document.getElementById("input2");
+    let input2 = inputField2.value;
+
+    let inputField3 = document.getElementById("input3");
+    let input3 = inputField3.value;
+		
+	
+    let inputField4 = document.getElementById("input4");
+    let input4 = inputField4.value;
+
+	
+		let showOutput = inv2matrix(parseInt(input1), parseInt(input2), parseInt(input3), parseInt(input4));
+
+		
+    writeOutput(showOutput[0].toFixed(1),
+      showOutput[1].toFixed(1), showOutput[2].toFixed(1), showOutput[3].toFixed(1)); 
+		// <-- replace this with YOUR CODE
+  }
+
+
+  let result;
+	let invMatrix = [];
+  
+  function writeOutput(text1, text2, text3, text4) {
+    let outputSpan1 = document.getElementById("output1");
+    outputSpan1.innerText = text1;
+		let outputSpan2 = document.getElementById("output2");
+    outputSpan2.innerText = text2;
+		let outputSpan3 = document.getElementById("output3");
+    outputSpan3.innerText = text3;
+		let outputSpan4 = document.getElementById("output4");
+    outputSpan4.innerText = text4;
+  }
+
+
+  // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  YOUR CODE  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+  function inv2matrix(input1, input2, input3, input4) {
+	 	
+		 if(isNaN(input1) == true) {
+				alert("a is not a Number");
+		 } else if(isNaN(input2) == true) {
+       alert("b is not Number");
+     } else if(isNaN(input3) == true) {
+       alert("c is not Number");
+      } else if(isNaN(input4) == true) {
+       alert("d is not Number");
+		 }
+			 
+	console.log(input1);
+	console.log(input2);
+	console.log(input3);
+	console.log(input4);
+
+	
+	result = (1 / ((input1 * input4) - (input2 * input3)));
+
+
+
+	let matrix = [input1, input2, input3, input4];
+
+	invMatrix[3] = (result * input1);
+	invMatrix[1] = (result * -input2);
+	invMatrix[2] = (result * -input3);
+	invMatrix[0] = (result * input4); 
+  
+  
+  return invMatrix;	
+}
+
+  // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑  YOUR CODE  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+
+</script>
+
+</html>
